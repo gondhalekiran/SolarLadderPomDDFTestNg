@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SolarLadderHomePage 
-{
-	
+{	
 	@FindBy(xpath ="(//span[@class='MuiButton-label'])[1]") private WebElement addProjectButton;  //private WebElement UN= driver.findElement(By.xpath(""))
 	@FindBy(xpath ="(//button[@type='button'])[4]") private WebElement closeMoreInfoPop; //private WebElement PWD= driver.findElement(By.xpath(""))
 	
