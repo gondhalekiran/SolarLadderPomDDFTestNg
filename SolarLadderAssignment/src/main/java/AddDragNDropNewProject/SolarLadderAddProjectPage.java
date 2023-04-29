@@ -7,22 +7,24 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SolarLadderAddProjectPage 
 {
-	@FindBy(xpath ="//input[@type='number']") private WebElement size;  //private WebElement UN= driver.findElement(By.xpath(""))
-	@FindBy(xpath ="(//input[@type='text'])[1]") private WebElement name; //private WebElement PWD= driver.findElement(By.xpath(""))
-	@FindBy(xpath ="//input[@type='tel']") private WebElement mobNo; //private WebElement signInBtn= driver.findElement(By.xpath(""))
-	@FindBy(xpath ="(//input[@type='text'])[2]") private WebElement location; //private WebElement signInBtn= driver.findElement(By.xpath(""))
-	@FindBy(xpath ="(//span[@class='MuiButton-label'])[2]") private WebElement submitBtn; //private WebElement signInBtn= driver.findElement(By.xpath(""))		
-	//step2: variable initialization
+	//Step1: Variable declaration
+	@FindBy(xpath ="//input[@type='number']") private WebElement size;  //private WebElement size= driver.findElement(By.xpath(""))
+	@FindBy(xpath ="(//input[@type='text'])[1]") private WebElement name; //private WebElement name= driver.findElement(By.xpath(""))
+	@FindBy(xpath ="//input[@type='tel']") private WebElement mobNo; //private WebElement mobNo= driver.findElement(By.xpath(""))
+	@FindBy(xpath ="//input[@placeholder='Ex: Delhi']") private WebElement location; //private WebElement location= driver.findElement(By.xpath(""))
+	@FindBy(xpath ="(//input[@type='search'])[1]") private WebElement city;  //private WebElement city= driver.findElement(By.xpath(""))
+	@FindBy(xpath ="(//span[@class='MuiButton-label'])[2]") private WebElement submitBtn; //private WebElement submitBtn= driver.findElement(By.xpath(""))		
+	//Step2: Variable initialization
 	public SolarLadderAddProjectPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this); //diffClassName.methodName(webdriverObject, this->Keyword);
 	}
 				
-	//step3: variable usage
-	public void inpSolarLadderAddProjectPageSize(String Sizekw) 
+	//Step3: Variable usage
+	public void inpSolarLadderAddProjectPageSize(String sizekw) 
 	{
 		size.clear();
-		size.sendKeys(Sizekw);
+		size.sendKeys(sizekw);
 	}
 	public void inpSolarLadderAddProjectPageName(String Name) 
 	{
@@ -35,6 +37,10 @@ public class SolarLadderAddProjectPage
 	public void inpSolarLadderAddProjectPageLocation(String Location) 
 	{
 		location.sendKeys(Location);
+	}
+	public void inpSolarLadderAddProjectPageCity(String City)
+	{
+		city.sendKeys(City);
 	}
 	public void clickSolarLadderAddProjectPageSubmitBtn()
 	{
